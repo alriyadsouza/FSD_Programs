@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Capital</title>
+    <style>
+        p{
+            color: red;
+            font-weight: bold;
+            font-size: 50px;
+        }
+    </style>
+    <script language="JavaScript">
+        function capital(){
+        var cunt= documnet.forms["form1"].country.value;
+        var capital="Please Select A Country";
+        if(cunt=="India")
+        {
+            capital="New Delhi"
+        }
+        if(cunt=='Pakistan')
+        {
+            capital="Islamabad"
+        }
+        if(cunt=='Bangladesh')
+        {
+            capital="Badha"
+        }
+        if(cunt=='China')
+        {
+            capital="Beijing"
+        }
+        if(cunt=='Japan')
+        {
+            capital="Tokyo"
+        }
+        if(cunt=='Select')
+        {
+            capital="Please Select a country"
+        }
+        document.getElementById("capt").innerHTML=capital
+    }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <hr>
+        <center>
+            Select a Country: <select name="country" onchange="capital()">
+                <option values="select">--SELECT--</option>
+                <option values="India">India</option>
+                <option values="Pakistan">Pakistan</option>
+                <option values="Bangladesh">Bangladesh</option>
+                <option values="China">China</option>
+                <option values="Japan">Japan</option>
+            </select>
+            <br>
+            <br>
+            <font color="green" size=6>Capital is:</font>
+            <p id="capt"></p>
+        </center>
+    </form>
+    
+</body>
+</html>
